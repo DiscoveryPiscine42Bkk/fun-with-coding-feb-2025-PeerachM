@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+}
+.menu {
+    position: relative;
+}
+.menu-button {
+    background-color: lightseagreen;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: lightyellow;
+    border-radius: 4px;
+    width: 100%;
+}
+.dropdown a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+}
+.dropdown a:hover {
+    background-color: rgb(255, 255, 181);
+}
+.menu:hover .dropdown {
+    display: block;
+}
