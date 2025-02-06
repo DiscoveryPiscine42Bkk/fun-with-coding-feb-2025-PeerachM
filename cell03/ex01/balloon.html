@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1 Balloon</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #balloon{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="balloon" onclick="grow()" onmouseleave="shrink()"></div>
+    </div>
+
+    <script>
+        const colorList = ["red", "green", "blue"];
+        let currentColor = 0;
+        let currentSize = 200;
+        function grow(){
+            let balloon = document.getElementById("balloon");
+            if (currentSize <= 410){
+                currentSize+=10;
+                balloon.style.width=currentSize+"px";
+                balloon.style.height=currentSize+"px";
+            }else{
+                currentSize=200;
+                balloon.style.width="200px";
+                balloon.style.height="200px";
+            }
+            currentColor=(currentColor+1)%3;
+            balloon.style.backgroundColor = colorList[currentColor];
+        }
+        function shrink(){
+            if (currentSize>=205){
+                currentSize-=5;
+                balloon.style.width=currentSize+"px";
+                balloon.style.height=currentSize+"px";
+            }
+            currentColor=((currentColor-1)+3)%3;
+            balloon.style.backgroundColor = colorList[currentColor];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.0 backgroound</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+    <button onclick="changeBgColor()">Click me!</button>
+    
+    <script>
+        function changeBgColor(){
+            document.body.style.backgroundColor = `rgb(${Math.random() * 256}, ${Math.random() * 256}, ${Math.random() * 256})`
+        }
+    </script>
+</body>
+</html>
